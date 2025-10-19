@@ -1,0 +1,74 @@
+{
+    "layer": "top",
+    "height": 40,
+    "spacing": 4,
+    "position": "top",
+
+    "modules-left": [
+        "niri/workspaces",
+        "niri/window"
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        "cpu",
+        "network",
+        "pulseaudio",
+        "battery"
+    ],
+
+    "niri/window": {
+        "icon": true,
+        "icon-size": 24
+    },
+
+    "clock": {
+        "format": "  {:%I:%M %p %a}",
+        "format-alt": "  {:%a %d %b}",
+        "tooltip": false
+    },
+
+    "cpu": {
+        "interval": 2,
+        "format": " 󰍛  {usage}%",
+        "on-double-click": "kitty btop",
+        "tooltip": false
+    },
+
+    "network": {
+        "format-wifi": "{icon}   {essid}",
+        "format-ethernet": "   Wired",
+        "format-disconnected": "󰤭",
+        "format-disabled": "󰤣",
+        "max-length": 10,
+        "interval": 10,
+        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
+    },
+
+    "pulseaudio": {
+        "format": "{icon}  {volume}",
+        "format-bluetooth": "󰂯  {volume}",
+        "format-muted": "   {volume}",
+        "scroll-step": 5.0,
+        "on-double-click": "pavucontrol",
+        "on-click-right": "blueman-manager",
+        "max-length": 100,
+        "format-icons": {
+            "headphone": "",
+            "headset": "",
+            "default": ["", "", ""]
+        }
+    },
+
+    "battery": {
+        "format": "{icon}  {capacity}%",
+        "interval": 3,
+        "format-icons": ["󰁺", "󰁻", "󰁾", "󰂀", "󰂂"],
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": "󰂄 {capacity}%",
+        "format-full": "󱟢"
+    }
+}

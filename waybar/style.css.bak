@@ -1,0 +1,140 @@
+* {
+    font-family: "JetBrainsMono Nerd Font Propo", sans-serif;
+    font-size: 15px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+}
+
+#waybar {
+    background: transparent;
+    color: #c6d0f5;
+    margin: 0px;
+    font-weight: 600;
+}
+
+#workspaces,
+#cpu {
+    background-color: #1a1b26;
+    padding: 0.3rem 0.7rem;
+    margin: 5px 0px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    min-width: 0;
+    border: none;
+}
+
+
+#workspaces {
+    padding: 2px;
+    margin-left: 7px;
+    margin-right: 5px;
+}
+
+#cpu:hover {
+    background-color: rgb(41, 42, 53);
+}
+
+#workspaces button {
+    color: #babbf1;
+    border-radius: 5px;
+    padding: 0.3rem 0.6rem;
+    background: transparent;
+    transition: all 0.2s ease-in-out;
+    border: none;
+    outline: none;
+}
+
+#workspaces button.active {
+    color: #99d1db;
+    background-color: rgba(153, 209, 219, 0.1);
+    /* box-shadow: inset 0 0 0 1px rgba(153, 209, 219, 0.2); */
+}
+
+#workspaces button:hover {
+    background: rgb(41, 42, 53);
+    color: #c6d0f5;
+}
+
+#clock {
+    background-color: #1a1b26;
+    padding: 0.3rem 0.7rem;
+    margin: 5px 0px;
+    border-radius: 6px;
+    /* box-shadow: 0 1px 3px rgba(153, 209, 219, 0.2); */
+    min-width: 0;
+    border: none;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#clock:hover {
+    background-color: rgba(153, 209, 219, 0.1);
+}
+
+#pulseaudio,
+#network,
+#battery {
+    background-color: #1a1b26;
+    padding: 0.3rem 0.7rem;
+    margin: 5px 0px;
+    border-radius: 6;
+    min-width: 0;
+    border: none;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#pulseaudio:hover,
+#network:hover,
+#battery:hover {
+    background-color: rgb(41, 42, 53);
+}
+
+#battey {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    margin-right: 7px;
+}
+
+#cpu {
+    color: #c6d0f5;
+}
+
+#clock {
+    color: #99d1db;
+    font-weight: 500;
+}
+
+#pulseaudio {
+    color: #c6d0f5;
+}
+
+#network {
+    color: #c6d0f5;
+}
+
+#network.disconnected {
+    color: #e78284;
+}
+
+#battery {
+    color: #99d1db;
+}
+
+#battery.charging {
+    color: #a6d189;
+}
+
+#battery.warning:not(.charging) {
+    color: #e78284;
+}
+
+tooltip {
+  background-color: #1a1b26;
+  color: #dddddd;
+  padding: 5px 12px;
+  margin: 5px 0px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-size: 12px;
+}
